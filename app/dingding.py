@@ -44,7 +44,7 @@ class Message:
         api_url = "https://oapi.dingtalk.com/robot/send?access_token=%s" % tmpToken
         print("api_url=")
         print(api_url)
-        json_text = self._msg(text+"\n______")
+        json_text = self._msg("钉小钉_"+text+"\n______")
         response = requests.post(api_url, json.dumps(json_text), headers=headers).content
         print(response)
 

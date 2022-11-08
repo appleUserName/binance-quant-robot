@@ -16,6 +16,10 @@ orderManager = OrderManager("USDT", 100,"DOGE", binance_market)
 
 orderManager_eth = OrderManager("USDT", 100,"ETH", binance_market)
 
+mkrOrderManager = OrderManager("USDT", 10, "MKR", binance_market)
+
+btcOrderManager = OrderManager("USDT", 10, "BTC", binance_market)
+
 msgDing = Message()
 
 # 发送消息通知
@@ -28,7 +32,9 @@ def sendInfoToDingDing( message, isDefaultToken):
 
 
 def binance_func():
-    orderManager.binance_func()
+    btcOrderManager.binance_func()
+    # mkrOrderManager.binance_func()
+    # orderManager.binance_func()
     # time.sleep(5)
     # orderManager_eth.binance_func()
 
